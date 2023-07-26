@@ -1,0 +1,81 @@
+{
+	"api-config":{
+		"dal-api": "http://dal.aispl.co:3030",
+		"pel-api": "http://pel.aispl.co:3000",
+		"heartBeat":"http://dal.aispl.co:3030/quad-status",
+		"auth": "0",
+		"api-list":[{
+						"tableName": "cycleTimes",
+						"apiName": "/cycle-times",
+						"maxDataAccess":"1000",
+						"compression":1
+					},
+
+					{
+						"tableName": "counterReset",
+						"apiName": "/counter-reset",
+						"maxDataAccess":"100",
+						"compression":0
+					},
+					{
+						"tableName": "quadStatus",
+						"apiName": "/quad-status",
+						"maxDataAccess":"100",
+						"compression":0
+					},
+					{
+						"tableName": "physical",
+						"apiName": "/physical",
+						"maxDataAccess":"10000",
+						"compression":1
+					},
+					{
+						"tableName": "rejectCounts",
+						"apiName": "/reject-counts",
+						"maxDataAccess":"100",
+						"compression":0
+					},
+					{
+						"tableName": "errorLogs",
+						"apiName": "/error-logs",
+						"maxDataAccess":"0",
+						"compression":0
+					},
+					{
+						"tableName":"activities",
+						"apiName": "​/activities",
+						"maxDataAccess":"0",
+						"compression":0
+					},
+					{
+						"tableName": "initialPulse",
+						"apiName": "/initial-pulse",
+						"maxDataAccess":"100",
+						"compression":0
+					},
+					{
+						"tableName": "alarms",
+						"apiName": "/alarms",
+						"maxDataAccess":"50",
+						"compression":0
+					}]
+				},
+	"db-config": {
+		"host": "localhost",
+		"user": "root",
+		"password": "root",
+		"database": "/var/www/html/database/quadDb.db"
+	},
+	"physical": {
+		"inputPins": {
+			"P1": 38,
+			"P2": 35,
+			"P3": 36,
+			"P4": 33,
+			"P5": 31,
+			"P6": 29
+		}
+	},
+	"timeUpdate":"local",
+	"localTimeApi" : " http://172.16.5.51:5000/"
+}
